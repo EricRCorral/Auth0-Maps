@@ -3,6 +3,10 @@ body {
     height: 100%;
 }
 
+.puntero {
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -22,8 +26,17 @@ body {
     background-size: 100% auto;
 }
 
+.logout {
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
 
-/* Animaciones */
+
+/* Animations */
 
 .animated {
     -webkit-animation-duration: 1.7s;

@@ -1,4 +1,19 @@
-<mat-card class="mt-2 mb-1">
+<div class="py-4 bg-transparent animated fadeIn">
+    <div *ngIf="auth.loggedIn && auth.userProfile$ | async as profile" class="container text-center">
+        <img class="avatar" [src]="profile.picture" alt="">
+        <h1 class='my-3'><strong>¡Bienvenid@ {{ profile.name }}!</strong></h1>
+        <div class="row">
+            <div class="col-md-10 text-center pt-3">
+                <h3>¡Ya estas list@ para usar Maps! podrás colocar, editar o eliminar marcadores que serán guardados de forma local en tu navegador. Para salir haga click en
+                    <i class="material-icons">power_settings_new</i></h3>
+            </div>
+            <div class="col-md-2 text-center pt-3"><img src="../../../assets/images/logout.png" (click)='this.auth.logout()' class='logout bg-transparent puntero'></div>
+        </div>
+
+    </div>
+</div>
+
+<mat-card class="mb-3">
     <mat-card-title>Maps</mat-card-title>
     <mat-card-content>
 

@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Marcador } from '../../class/marcador/marcador.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { MapaEditarComponent } from './mapa-editar.component';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css']
 })
-export class MapaComponent implements OnInit {
+export class MapaComponent {
 
   marcadores: Marcador [] = [];
 
   lat = -34.6131516;
   lng = -58.3772316;
 
-  constructor(private snackBar: MatSnackBar,
+  constructor(public auth: AuthService,
+              private snackBar: MatSnackBar,
               public dialog: MatDialog) {
 
     if ( localStorage.getItem('marcadores')) {
@@ -26,9 +28,6 @@ export class MapaComponent implements OnInit {
     }
 
    }
-
-  ngOnInit() {
-  }
 
   agregarMarcador(evento) {
 

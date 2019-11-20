@@ -2,10 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-// Componentes
+// Components
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CallbackComponent } from './components/callback/callback.component';
 import { MapaComponent } from './components/mapa/mapa.component';
@@ -24,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AgmCoreModule } from '@agm/core';
 
+// Cookies
+
+import { CookieService} from 'ngx-cookie-service' ;
 
 @NgModule({
 
@@ -31,11 +33,10 @@ import { AgmCoreModule } from '@agm/core';
 
   declarations: [
     AppComponent,
-    NavbarComponent,
     HomeComponent,
     CallbackComponent,
     MapaComponent,
-    MapaEditarComponent
+    MapaEditarComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +49,7 @@ import { AgmCoreModule } from '@agm/core';
     })
 
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

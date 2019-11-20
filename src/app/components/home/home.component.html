@@ -1,11 +1,7 @@
-<div class="jumbotron jumbotron-fluid mt-3 bg-transparent animated fadeIn">
-    <div class="container text-center" [hidden]="auth.loggedIn">
-        <h1>¡Bienivenid@ a Auth0/Maps!</h1>
-        <p class="lead">Para comenzar a utilizar el Maps de forma local inicie sesion con su cuenta Auth0 o Google.</p>
-    </div>
-    <div *ngIf="auth.loggedIn && auth.userProfile$ | async as profile" class="container text-center">
-        <img class="avatar" [src]="profile.picture" alt="">
-        <h1>¡Bienvenid@ {{ profile.name }}!</h1>
-        <p class="lead">¡Ya estas list@ para usar Maps! podras colocar, editar o eliminar marcadores que serán guardados de forma local en tu navegador.</p>
+<div *ngIf="!this.cookies.check('auth0.is.authenticated')" class="mt-4 mb-2 bg-transparent animated fadeIn">
+    <div class="container text-center">
+        <h1><strong>¡Bienivenid@ a AuthMaps!</strong></h1>
+        <h3 class='mt-4'>Para comenzar a utilizar el Maps haga click en la imagen e ingrese con su cuenta Auth0 o Google.</h3>
+        <img src="../../../assets/images/auth0.png" (click)="auth.login()" class='avatar puntero mt-5'>
     </div>
 </div>

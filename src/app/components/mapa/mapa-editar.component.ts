@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 
@@ -7,7 +7,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   selector: 'app-mapa-editar',
   templateUrl: './mapa-editar.component.html',
 })
-export class MapaEditarComponent implements OnInit {
+export class MapaEditarComponent {
 
   forma: FormGroup;
 
@@ -22,10 +22,6 @@ export class MapaEditarComponent implements OnInit {
       });
 
     }
-
-
-  ngOnInit() {
-  }
 
   guardarCambios() {
     this.dialogRef.close(this.forma.value);
