@@ -71,14 +71,13 @@ export class AuthService {
   }
 
   login(redirectPath: string = '/') {
-    console.log(window.location.origin , window.location.href, window.location.pathname);
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log in
       client.loginWithRedirect({
-        redirect_uri: `${window.location.origin}/callback`,
+        redirect_uri: `${window.location.href}/callback`,
         appState: { target: redirectPath }
       });
     });
