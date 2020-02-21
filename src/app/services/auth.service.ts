@@ -15,7 +15,7 @@ export class AuthService {
     createAuth0Client({
       domain: 'dev-vzuvmh5l.auth0.com',
       client_id: 'Sykh4ns24HxsWTie94p5FxyHjarlvYcq',
-      redirect_uri: `${window.location.origin}/callback`
+      redirect_uri: `${window.location.href}/callback`
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
@@ -115,7 +115,7 @@ export class AuthService {
       // Call method to log out
       client.logout({
         client_id: 'Sykh4ns24HxsWTie94p5FxyHjarlvYcq',
-        returnTo: `${window.location.origin}`
+        returnTo: `${window.location.href}`
       });
     });
   }
