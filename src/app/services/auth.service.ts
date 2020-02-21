@@ -15,7 +15,7 @@ export class AuthService {
     createAuth0Client({
       domain: 'dev-vzuvmh5l.auth0.com',
       client_id: 'Sykh4ns24HxsWTie94p5FxyHjarlvYcq',
-      redirect_uri: `${window.location.origin}/callback`
+      redirect_uri: `https://ericrcorral.github.io/AuthMaps/home/callback`
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
@@ -77,7 +77,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log in
       client.loginWithRedirect({
-        redirect_uri: `${window.location.origin}/callback`,
+        redirect_uri: `https://ericrcorral.github.io/AuthMaps/home/callback`,
         appState: { target: redirectPath }
       });
     });
@@ -115,7 +115,7 @@ export class AuthService {
       // Call method to log out
       client.logout({
         client_id: 'Sykh4ns24HxsWTie94p5FxyHjarlvYcq',
-        returnTo: `${window.location.origin}`
+        returnTo: `https://ericrcorral.github.io/AuthMaps/home`
       });
     });
   }
