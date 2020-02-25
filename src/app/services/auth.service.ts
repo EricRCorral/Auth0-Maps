@@ -78,7 +78,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log in
       client.loginWithRedirect({
-        redirect_uri: `${window.location.origin}/AuthMaps/home`,
+        redirect_uri: `${window.location.origin}/AuthMaps/mapa`,
         appState: { target: redirectPath }
       });
     });

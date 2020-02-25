@@ -15,11 +15,5 @@ export class HomeComponent implements OnInit {
    }
 
    ngOnInit() {
-
-     if (this.cookies.check('auth0.is.authenticated')) {
-      this.route.navigate(['/AuthMaps/mapa']);
-    } else {
-      return;
     }
    }
-  }
