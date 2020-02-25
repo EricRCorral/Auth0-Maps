@@ -6,4 +6,6 @@
     </div>
 </div>
 
-<button (click)="irMapa()" class="btn btn-outline-info animated fadeIn text-center mt-5" *ngIf="this.cookies.check('auth0.is.authenticated')">Ir a los mapas</button>
+<div class="container text-center" *ngIf="this.cookies.check('auth0.is.authenticated')">
+    <button (click)="irMapa()" class="btn btn-outline-success animated fadeIn mt-5 pt-5">Ir al mapa</button>
+</div>
