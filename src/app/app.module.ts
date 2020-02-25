@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { CallbackComponent } from './components/callback/callback.component';
+// import { CallbackComponent } from './components/callback/callback.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { MapaEditarComponent } from './components/mapa/mapa-editar.component';
 
@@ -34,7 +34,7 @@ import { CookieService} from 'ngx-cookie-service' ;
   declarations: [
     AppComponent,
     HomeComponent,
-    CallbackComponent,
+    // CallbackComponent,
     MapaComponent,
     MapaEditarComponent,
   ],
