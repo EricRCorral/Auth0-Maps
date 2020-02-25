@@ -12,6 +12,10 @@ export class HomeComponent implements OnInit {
   constructor(public auth: AuthService,
               public route: Router,
               public cookies: CookieService ) {
+
+                if (cookies.check('auth0.is.authenticated') === true) {
+                  this.route.navigate(['mapa']);
+                }
    }
 
    ngOnInit() {
