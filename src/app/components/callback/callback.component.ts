@@ -14,8 +14,8 @@ export class CallbackComponent implements OnInit {
   ngOnInit() {
     this.auth.handleAuthCallback();
 
-    if (window.location.href === `${window.location.origin}/callback`) {
-      this.route.navigateByUrl(`${window.location.origin}/mapa`);
+    if (window.location.href === `${window.location.origin}/AuthMaps/home`) {
+      this.route.navigateByUrl(`${window.location.origin}/AuthMaps/`);
     }
     }
   }

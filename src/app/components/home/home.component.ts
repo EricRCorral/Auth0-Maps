@@ -12,8 +12,6 @@ export class HomeComponent implements OnInit {
   constructor(public auth: AuthService,
               public route: Router,
               public cookies: CookieService ) {
-
-                console.log(window.location.origin, window.location.host, window.location.hostname, window.location.search);
    }
 
    ngOnInit() {
