@@ -115,7 +115,7 @@ export class AuthService {
       // Call method to log out
       client.logout({
         client_id: 'Sykh4ns24HxsWTie94p5FxyHjarlvYcq',
-        returnTo: `https://ericrcorral.github.io/AuthMaps/home/`
+        returnTo: `https://ericrcorral.github.io/AuthMaps/`
       });
     });
   }
