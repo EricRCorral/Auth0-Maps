@@ -5,3 +5,5 @@
         <img src="assets/images/auth0.png" (click)="auth.login()" class='avatar puntero mt-5'>
     </div>
 </div>
+
+<button (click)="irMapa()" class="btn btn-outline-info animated fadeIn text-center mt-5" *ngIf="this.cookies.check('auth0.is.authenticated')">Ir a los mapas</button>

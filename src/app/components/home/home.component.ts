@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
                 }
    }
 
+   irMapa() {
+    this.route.navigate(['mapa']);
+   }
+
    ngOnInit() {
     }
    }
